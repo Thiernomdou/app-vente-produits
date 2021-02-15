@@ -34,9 +34,10 @@ namespace Calage_Inserts
             try
             {
                 myConnection.Open();
+                string strindexe = @"SELECT Max(Indexe) FROM[ACI].[dbo].[Inserts]";
                 string strRequete = @"INSERT INTO [ACI].[dbo].[Inserts] (Indexe,Numero,Produit,Base1,Base2,Addition,Oeil,CCCX,Glass,Hauteur_Centre,Hauteur_Bord)VALUES(@Indexe,@Numero,@Produit,@Base1,@Base2,@Addition,@Oeil,@CCCX,@Glass,@Hauteur_Centre,@Hauteur_Bord); ";
                 SqlCommand myCommand = new SqlCommand(strRequete, myConnection);
-                myCommand.Parameters.AddWithValue("@Indexe", Indexe.Text);
+                myCommand.Parameters.AddWithValue("@Indexe", strindexe);
                 myCommand.Parameters.AddWithValue("@Numero", Numero.Text);
                 myCommand.Parameters.AddWithValue("@Produit", Produit.Text);
                 myCommand.Parameters.AddWithValue("@Base1", Base1.Text);
@@ -48,16 +49,12 @@ namespace Calage_Inserts
                 myCommand.Parameters.AddWithValue("@Hauteur_Centre", Hauteur_Centre.Text);
                 myCommand.Parameters.AddWithValue("@Hauteur_Bord", Hauteur_Bord.Text);
                 SqlDataReader mySqDataReader = myCommand.ExecuteReader();
-                //Produit.Text == ""  Base1.Text == ""  Base2.Text == "" || Addition.Text == "" || Oeil.Text == "" || CCCX.Text == "" || Glass.Text == "" || Hauteur_Centre.Text == "" || Hauteur_Bord.Text == "")
+             
                 int i, n=100;
                 for(i=0; i<n; i++)
                 {
-                    if (Indexe.Text == "")
-                    {
-                        MessageBox.Show("Veuillez entrez l'Indexe de l'insert");
-
-                    }
-                    else if (Numero.Text == "")
+                    
+                    if (Numero.Text == "")
                     {
                         MessageBox.Show("Veuillez entrez le Numéro de l'insert");
                     }
@@ -92,7 +89,7 @@ namespace Calage_Inserts
                     else
                     {
                         MessageBox.Show("Vous avez inséré l'insert " + Numero.Text);
-                        Indexe.Text = ""; Numero.Text = ""; Produit.Text = ""; Base1.Text = ""; Base2.Text = ""; Addition.Text = ""; Oeil.Text = "";
+                        Numero.Text = ""; Produit.Text = ""; Base1.Text = ""; Base2.Text = ""; Addition.Text = ""; Oeil.Text = "";
                         CCCX.Text = ""; Glass.Text = ""; Hauteur_Centre.Text = ""; Hauteur_Bord.Text = "";
 
                     }

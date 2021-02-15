@@ -51,9 +51,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.Indexe = new System.Windows.Forms.TextBox();
             this.Hauteur_Bord = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -273,14 +271,6 @@
             this.label12.Size = new System.Drawing.Size(0, 22);
             this.label12.TabIndex = 38;
             // 
-            // Indexe
-            // 
-            this.Indexe.Location = new System.Drawing.Point(390, 102);
-            this.Indexe.Multiline = true;
-            this.Indexe.Name = "Indexe";
-            this.Indexe.Size = new System.Drawing.Size(162, 32);
-            this.Indexe.TabIndex = 21;
-            // 
             // Hauteur_Bord
             // 
             this.Hauteur_Bord.Location = new System.Drawing.Point(819, 426);
@@ -289,23 +279,12 @@
             this.Hauteur_Bord.Size = new System.Drawing.Size(162, 32);
             this.Hauteur_Bord.TabIndex = 39;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(237, 112);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 22);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Indexe";
-            // 
             // Ajouter_un_insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1137, 650);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.Hauteur_Bord);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button2);
@@ -323,7 +302,6 @@
             this.Controls.Add(this.Base1);
             this.Controls.Add(this.Produit);
             this.Controls.Add(this.Numero);
-            this.Controls.Add(this.Indexe);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -364,8 +342,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox Indexe;
         private System.Windows.Forms.TextBox Hauteur_Bord;
-        private System.Windows.Forms.Label label13;
     }
 }
