@@ -34,10 +34,8 @@ namespace Calage_Inserts
             try
             {
                 myConnection.Open();
-                string strindexe = @"SELECT Max(Indexe) FROM[ACI].[dbo].[Inserts]";
-                string strRequete = @"INSERT INTO [ACI].[dbo].[Inserts] (Indexe,Numero,Produit,Base1,Base2,Addition,Oeil,CCCX,Glass,Hauteur_Centre,Hauteur_Bord)VALUES(@Indexe,@Numero,@Produit,@Base1,@Base2,@Addition,@Oeil,@CCCX,@Glass,@Hauteur_Centre,@Hauteur_Bord); ";
+                string strRequete = @"INSERT INTO [ACI].[dbo].[Inserts] (Numero,Produit,Base1,Base2,Addition,Oeil,CCCX,Glass,Hauteur_Centre,Hauteur_Bord)VALUES(@Numero,@Produit,@Base1,@Base2,@Addition,@Oeil,@CCCX,@Glass,@Hauteur_Centre,@Hauteur_Bord); ";
                 SqlCommand myCommand = new SqlCommand(strRequete, myConnection);
-                myCommand.Parameters.AddWithValue("@Indexe", strindexe);
                 myCommand.Parameters.AddWithValue("@Numero", Numero.Text);
                 myCommand.Parameters.AddWithValue("@Produit", Produit.Text);
                 myCommand.Parameters.AddWithValue("@Base1", Base1.Text);
@@ -49,10 +47,6 @@ namespace Calage_Inserts
                 myCommand.Parameters.AddWithValue("@Hauteur_Centre", Hauteur_Centre.Text);
                 myCommand.Parameters.AddWithValue("@Hauteur_Bord", Hauteur_Bord.Text);
                 SqlDataReader mySqDataReader = myCommand.ExecuteReader();
-             
-                int i, n=100;
-                for(i=0; i<n; i++)
-                {
                     
                     if (Numero.Text == "")
                     {
@@ -93,7 +87,7 @@ namespace Calage_Inserts
                         CCCX.Text = ""; Glass.Text = ""; Hauteur_Centre.Text = ""; Hauteur_Bord.Text = "";
 
                     }
-                }
+                
                 
             }
             catch (Exception eMsg1)
@@ -104,6 +98,11 @@ namespace Calage_Inserts
             {
                 myConnection.Close();
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+ 
         }
     }
 }
