@@ -94,11 +94,49 @@ namespace Calage_Inserts
 
         }
 
+        
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            string fileName = "Job.xlsx";
+            string sourcePath = @"R:\COMMUN\ACI\Jobs\temple";
+            string targetPath = @"R:\COMMUN\ACI\Data\Jobs_Combo";
+
+            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
+            string destFile = System.IO.Path.Combine(targetPath, dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value+"_"+fileName);
+
+            //System.IO.Directory.CreateDirectory(targetPath);
+
+            if(!File.Exists(destFile))
+            {
+                System.IO.File.Copy(sourceFile, destFile);
+              
+                MessageBox.Show("Vous avez extrait le fichier " + dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value + "_Job" + " dans " + "R:\\COMMUN\\ACI\\Data\\Jobs_Combo");
+
+                object missValue = System.Reflection.Missing.Value;
+
+                Excel.Application appExcel = new Excel.Application();
+                Excel.Workbook xlworkbook = appExcel.Workbooks.Add(missValue);
+                Excel.Worksheet xlworkSheet = (Excel.Worksheet)xlworkbook.Worksheets.get_Item(1);
+
+                xlworkSheet.Cells[4, 2] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
+                xlworkSheet.Cells[1, 2] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
+                xlworkSheet.Cells[30, 1] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
+
+
+                //xlworkbook.SaveAs(@"R:\COMMUN\ACI\Data\Jobs_Combo" + dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value + "_" + fileName, Excel.XlSaveAction.xlSaveChanges, missValue, missValue, missValue, missValue, Excel.XlSaveAsAccessMode.xlNoChange, missValue, missValue, missValue, missValue, missValue);
+
+            }
+            else
+            {
+                MessageBox.Show("Le fichier " +  dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value + "_Job " + " existe déjà");
+            }
+
+
+
+
 
             //manipulation file et directory
+            /*
             string sourceFile = System.IO.Path.Combine(@"R:\COMMUN\ACI\Jobs\temple\Job.xlsx");
             string destFile =   System.IO.Path.Combine(@"R:\COMMUN\ACI\Data\Jobs_Combo\Job" + dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value);
             
@@ -115,7 +153,7 @@ namespace Calage_Inserts
 
                     //File.Delete(destFile);
                     // Move the file.
-                    /*                  
+                                     
                     object missValue = System.Reflection.Missing.Value;
 
                     Excel.Application appExcel = new Excel.Application();
@@ -123,7 +161,7 @@ namespace Calage_Inserts
                     Excel.Worksheet xlworkSheet = (Excel.Worksheet)xlworkbook.Worksheets.get_Item(1);
 
                     xlworkSheet.Cells[4, 2] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
-                    */
+                    
                     //xlworkbook.SaveAs(destFile,Excel.XlSaveAction.xlSaveChanges, missValue, missValue, missValue, missValue, Excel.XlSaveAsAccessMode.xlNoChange, missValue, missValue, missValue, missValue, missValue);
                     
 
@@ -144,7 +182,7 @@ namespace Calage_Inserts
                 Console.WriteLine("Erreur", es.ToString());
             }
             
-            
+            */
 
             //System.IO.File.Move(sourceFile, destFile);
 
