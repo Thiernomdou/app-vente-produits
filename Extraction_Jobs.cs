@@ -112,19 +112,27 @@ namespace Calage_Inserts
               
                 MessageBox.Show("Vous avez extrait le fichier " + dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value + "_Job" + " dans " + "R:\\COMMUN\\ACI\\Data\\Jobs_Combo");
 
-                object missValue = System.Reflection.Missing.Value;
+                var excelApp = new Excel.Application();
 
-                Excel.Application appExcel = new Excel.Application();
-                Excel.Workbook xlworkbook = appExcel.Workbooks.Add(missValue);
-                Excel.Worksheet xlworkSheet = (Excel.Worksheet)xlworkbook.Worksheets.get_Item(1);
+                excelApp.Visible = true;
 
-                xlworkSheet.Cells[4, 2] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
-                xlworkSheet.Cells[1, 2] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
-                xlworkSheet.Cells[30, 1] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
+                Excel._Worksheet workBooks = (Excel.Worksheet)excelApp.ActiveSheet;
 
+                //Ouverture du fichier Excel, à vous de choisir l'emplacement ou est situé le fichier excel ainsi que son nom!!
 
-                //xlworkbook.SaveAs(@"R:\COMMUN\ACI\Data\Jobs_Combo" + dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value + "_" + fileName, Excel.XlSaveAction.xlSaveChanges, missValue, missValue, missValue, missValue, Excel.XlSaveAsAccessMode.xlNoChange, missValue, missValue, missValue, missValue, missValue);
+                Microsoft.Office.Interop.Excel._Workbook workbook = excelApp.Workbooks.Open(destFile);
 
+                workBooks = workbook.Sheets["Feuil1"]; // On sélectionne la Feuil1
+
+                workBooks = workbook.ActiveSheet;
+
+                //workBooks.Name = "Electronique71.com"; // on renomme la Feuil1 
+
+                //dataGridView1.RowHeadersVisible = false;
+
+                
+                    workBooks.Cells[2, 4] = dataGridView1.CurrentRow.Cells["ORGANIZATION_ID"].Value;
+                
             }
             else
             {
