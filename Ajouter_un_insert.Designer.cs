@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 151);
+            this.label1.Location = new System.Drawing.Point(202, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 22);
             this.label1.TabIndex = 16;
@@ -91,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(224, 236);
+            this.label3.Location = new System.Drawing.Point(211, 177);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 22);
             this.label3.TabIndex = 17;
@@ -101,7 +101,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(224, 322);
+            this.label4.Location = new System.Drawing.Point(211, 263);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 22);
             this.label4.TabIndex = 18;
@@ -111,7 +111,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(215, 394);
+            this.label5.Location = new System.Drawing.Point(202, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 22);
             this.label5.TabIndex = 19;
@@ -121,7 +121,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(215, 479);
+            this.label6.Location = new System.Drawing.Point(202, 420);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 22);
             this.label6.TabIndex = 20;
@@ -129,7 +129,7 @@
             // 
             // Numero
             // 
-            this.Numero.Location = new System.Drawing.Point(388, 141);
+            this.Numero.Location = new System.Drawing.Point(375, 82);
             this.Numero.Multiline = true;
             this.Numero.Name = "Numero";
             this.Numero.Size = new System.Drawing.Size(162, 32);
@@ -137,7 +137,7 @@
             // 
             // Base1
             // 
-            this.Base1.Location = new System.Drawing.Point(388, 312);
+            this.Base1.Location = new System.Drawing.Point(375, 253);
             this.Base1.Multiline = true;
             this.Base1.Name = "Base1";
             this.Base1.Size = new System.Drawing.Size(162, 32);
@@ -145,7 +145,7 @@
             // 
             // Base2
             // 
-            this.Base2.Location = new System.Drawing.Point(388, 394);
+            this.Base2.Location = new System.Drawing.Point(375, 335);
             this.Base2.Multiline = true;
             this.Base2.Name = "Base2";
             this.Base2.Size = new System.Drawing.Size(162, 32);
@@ -153,7 +153,7 @@
             // 
             // Addition
             // 
-            this.Addition.Location = new System.Drawing.Point(388, 479);
+            this.Addition.Location = new System.Drawing.Point(375, 420);
             this.Addition.Multiline = true;
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(162, 32);
@@ -161,7 +161,7 @@
             // 
             // Hauteur_Centre
             // 
-            this.Hauteur_Centre.Location = new System.Drawing.Point(817, 302);
+            this.Hauteur_Centre.Location = new System.Drawing.Point(814, 321);
             this.Hauteur_Centre.Multiline = true;
             this.Hauteur_Centre.Name = "Hauteur_Centre";
             this.Hauteur_Centre.Size = new System.Drawing.Size(162, 32);
@@ -171,7 +171,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(728, 63);
+            this.label7.Location = new System.Drawing.Point(725, 82);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 22);
             this.label7.TabIndex = 31;
@@ -181,7 +181,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(719, 144);
+            this.label8.Location = new System.Drawing.Point(716, 163);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 22);
             this.label8.TabIndex = 32;
@@ -191,7 +191,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(728, 230);
+            this.label9.Location = new System.Drawing.Point(725, 249);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 22);
             this.label9.TabIndex = 33;
@@ -201,7 +201,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(655, 312);
+            this.label10.Location = new System.Drawing.Point(652, 331);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(134, 22);
             this.label10.TabIndex = 34;
@@ -211,7 +211,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(655, 401);
+            this.label11.Location = new System.Drawing.Point(652, 420);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(123, 22);
             this.label11.TabIndex = 35;
@@ -234,14 +234,14 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(235, 25);
+            this.label12.Location = new System.Drawing.Point(232, 44);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 22);
             this.label12.TabIndex = 38;
             // 
             // Hauteur_Bord
             // 
-            this.Hauteur_Bord.Location = new System.Drawing.Point(817, 391);
+            this.Hauteur_Bord.Location = new System.Drawing.Point(814, 410);
             this.Hauteur_Bord.Multiline = true;
             this.Hauteur_Bord.Name = "Hauteur_Bord";
             this.Hauteur_Bord.Size = new System.Drawing.Size(162, 32);
@@ -258,7 +258,7 @@
             "",
             "L",
             "R"});
-            this.Oeil.Location = new System.Drawing.Point(817, 64);
+            this.Oeil.Location = new System.Drawing.Point(814, 83);
             this.Oeil.Name = "Oeil";
             this.Oeil.Size = new System.Drawing.Size(162, 21);
             this.Oeil.TabIndex = 41;
@@ -275,7 +275,7 @@
             "CC",
             "CX",
             "CV"});
-            this.CCCX.Location = new System.Drawing.Point(817, 148);
+            this.CCCX.Location = new System.Drawing.Point(814, 167);
             this.CCCX.Name = "CCCX";
             this.CCCX.Size = new System.Drawing.Size(162, 21);
             this.CCCX.TabIndex = 42;
@@ -294,7 +294,7 @@
             "DLC",
             "NICKEL",
             "METAL"});
-            this.Glass.Location = new System.Drawing.Point(817, 234);
+            this.Glass.Location = new System.Drawing.Point(814, 253);
             this.Glass.Name = "Glass";
             this.Glass.Size = new System.Drawing.Size(162, 21);
             this.Glass.TabIndex = 43;
@@ -308,62 +308,18 @@
             this.Produit.IntegralHeight = false;
             this.Produit.Items.AddRange(new object[] {
             "",
-            "IPSEO",
-            "PCKID62",
-            "ROCKY",
-            "DEI PP 003 CX",
             "SPHERIQUE",
-            "ASPHERIQUE FINI",
-            "CV_G SPH76",
-            "DEI PP 015 CC",
-            "DEI PP 014 CC",
-            "CX_M SPH76",
-            "CV_M EVO80",
-            "P,K,",
-            "FINI KID 57",
-            "CONDE",
-            "DEI PP 005 CX",
-            "DEI PP 013 CC",
-            "FINI KID 62",
-            "CX_M PRG80",
-            "SELECTIVE",
-            "P,C,FINI,S,V,",
-            "CV_G EVO80",
-            "S,N,",
-            "DEI PP 006 CX",
-            "DLC",
-            "DEI PP 016 CC",
-            "ATLAS",
-            "DEI PP 010 CC",
-            "CV METAL SNL6 PC 80",
-            "Finished PAL Kids",
-            "DEI PP 002 CX",
-            "PLAN 72",
-            "DEI PP 009 CC",
-            "CONFORT",
-            "LIBERTY",
-            "DEI PP 007 CX",
-            "PCKID57",
-            "CV_M GX 80",
-            "DEI PP 004 CX",
-            "ULYSS",
-            "ESSAI 67",
-            "DEI PP 012 CC",
-            "DEI PP 001 CX",
-            "DEI PP 008 CX",
             "ASPHERIQUE",
-            "CV_M SPH76",
-            "DEI PP 011 CC",
-            "PANAMIC",
+            "CONDE",
             "GX",
-            "EVOLIS",
-            "CX_M ASP76",
-            "CV_M ASP76",
-            "G,P,L,"});
-            this.Produit.Location = new System.Drawing.Point(388, 237);
+            "OVATION",
+            "ROCKY",
+            "SNL"});
+            this.Produit.Location = new System.Drawing.Point(375, 178);
             this.Produit.Name = "Produit";
             this.Produit.Size = new System.Drawing.Size(162, 21);
             this.Produit.TabIndex = 44;
+            this.Produit.SelectedIndexChanged += new System.EventHandler(this.Produit_SelectedIndexChanged);
             // 
             // Ajouter_un_insert
             // 

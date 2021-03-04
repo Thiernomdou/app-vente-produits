@@ -104,5 +104,10 @@ namespace Calage_Inserts
         {
  
         }
+
+        private void Produit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -56,9 +56,9 @@
             this.label2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(457, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 22);
+            this.label2.Size = new System.Drawing.Size(168, 22);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Connexion à Cardex";
+            this.label2.Text = "Connexion à Kardex";
             // 
             // button1
             // 
