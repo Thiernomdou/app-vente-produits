@@ -100,7 +100,7 @@ namespace Calage_Inserts
             public string ColumnIndex { get; set; }
             public string Eye { get; set; }
 
-            
+
 
         }
         public class donnees3
@@ -111,26 +111,28 @@ namespace Calage_Inserts
             public float HauteurCentre { get; set; }
             public float HauteurBord { get; set; }
 
-            public string Epaisseur { get; set; }
-            public string CX { get; set; }
-
         }
-
 
         public class donnees4
         {
             public donnees4() { }
 
-            public string Epaisseur { get; set; }
-            public string CX { get; set; }
-            public string LB { get; set; }
+            public float Epaisseur { get; set; }
+            public float CX { get; set; }
+
+        }
+        public class donnees5
+        {
+            public donnees5() { }
+
+            public string numero { get; set; }
 
         }
 
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
 
             var shots_nb = 0;
             var cd_press = "";
@@ -271,8 +273,6 @@ namespace Calage_Inserts
 
             string destination = @"R:\COMMUN\ACI\Data\Jobs_Combo\Job_" + dataGridView1.CurrentRow.Cells["JOB_NB"].Value;
 
-
-
             var cavite = "";
             var ins_cv = "";
 
@@ -281,10 +281,21 @@ namespace Calage_Inserts
             OracleCommand cm = new OracleCommand();
             cm.Connection = con;
             cm.CommandText = "SELECT COMBO_JOB_LINES.CAVITY_JOB_NB,COMBO_JOB_LINES.LB_LOGI_SKU,COMBO_ITEMS.COLUMN_INDEX,COMBO_ITEMS.LINE_INDEX,COMBO_ITEMS.EYE,COMBO_BOM.TYPE_INS_CV,COMBO_ITEMS.PRODUCT FROM COMBO_JOB_LINES, COMBO_ITEMS, COMBO_BOM where COMBO_ITEMS.LB_LOGI_SKU = COMBO_JOB_LINES.LB_LOGI_SKU and COMBO_BOM.CD_CCE_SKU = COMBO_ITEMS.CD_CCE_SKU and JOB_NB = '" + dataGridView1.CurrentRow.Cells["JOB_NB"].Value + "' ORDER BY COMBO_JOB_LINES.CAVITY_JOB_NB ";
+
+            //01  547410081200000 + 0200C02175L 1.75 + 2.00   L METAL   54740810000
+            //02  547410081200000 + 0200C02175L 1.75 + 2.00   L METAL   54740810000
+            //03  547410081200000 + 0200C02175L 1.75 + 2.00   L METAL   54740810000
+            //04  547410081200000 + 0200C02175L 1.75 + 2.00   L METAL   54740810000
+            //05  547410081200000 + 0200C02175R 1.75 + 2.00   R METAL   54740810000
+            //06  547410081200000 + 0200C02175R 1.75 + 2.00   R METAL   54740810000
+            //07  547410081200000 + 0200C02175R 1.75 + 2.00   R METAL   54740810000
+            //08  547410081200000 + 0200C02175R 1.75 + 2.00   R METAL   54740810000
+
             OracleDataReader reade = cm.ExecuteReader();
             List<donnees2> list2 = new List<donnees2>();
             List<donnees3> list3 = new List<donnees3>();
             List<donnees4> list4 = new List<donnees4>();
+            List<donnees5> list5 = new List<donnees5>();
             while (reade.Read())
             {
                 cavite = reade.GetString(0);
@@ -302,17 +313,11 @@ namespace Calage_Inserts
             string myConnectionString = @"user id=sa; password=K@rdexlsadm21!; data source=FRESD32615\SQLEXPRESS";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-
-
-
-
-
-
             var Nom_Produit = "";
 
 
             string strRequette1 = "SELECT [Description_produit] FROM[ACI].[dbo].[Code_produit] where Product = '" + dataGridView1.CurrentRow.Cells["PRODUCT"].Value + "' ";
-           //MessageBox.Show(strRequette1);
+            //MessageBox.Show(strRequette1);
             myConnection.Open();
             SqlCommand myCommandd = new SqlCommand(strRequette1, myConnection);
             SqlDataReader mySqlDataReader = myCommandd.ExecuteReader();
@@ -324,7 +329,7 @@ namespace Calage_Inserts
 
 
             int i = 2;
-            
+
 
             foreach (donnees2 mesdonnees2 in list2)
             {
@@ -345,9 +350,7 @@ namespace Calage_Inserts
                     {
                         xlworkSheet.Cells[12, i] = mesdonnees2.LineIndex + "/" + mesdonnees2.ColumnIndex + "/" + mesdonnees2.Eye;
                     }
-
                 }
-                i += 1;
 
 
                 string strRequete1 = "SELECT DISTINCT [Numero],[Hauteur_Centre],[Hauteur_Bord] FROM [ACI].[dbo].[Inserts] where Glass = '" + ins_cv + "' and Oeil = '" + mesdonnees2.Eye + "' and Base1 = " + mesdonnees2.LineIndex + " and Addition = " + mesdonnees2.ColumnIndex + " and CCCX = 'CC' and Produit = '" + Nom_Produit + "' ";
@@ -355,6 +358,8 @@ namespace Calage_Inserts
                 myConnection.Open();
                 SqlCommand myCommand1 = new SqlCommand(strRequete1, myConnection);
                 SqlDataReader mySqllDataReader = myCommand1.ExecuteReader();
+               
+                list3.Clear();
 
                 while (mySqllDataReader.Read())
                 {
@@ -367,96 +372,52 @@ namespace Calage_Inserts
                     });
                 }
                 myConnection.Close();
-
-                int j = 2;
+                list5.Clear();
                 foreach (donnees3 mesdonnees3 in list3)
                 {
 
-                    string strRequette2 = "SELECT [MaterialName] FROM [PPG].[dbo].[Materialbase] where  [MaterialName] = '" + mesdonnees3.numero + "' ";
+                    string strRequette2 = "SELECT [MaterialName] FROM [PPG].[dbo].[Materialbase] where [MaterialName] = '" + mesdonnees3.numero + "' ";
                     //MessageBox.Show(strRequette2);
                     myConnection.Open();
                     SqlCommand myCommand2 = new SqlCommand(strRequette2, myConnection);
                     SqlDataReader mySqllDataReader2 = myCommand2.ExecuteReader();
-                    if (mySqllDataReader2.Read() != true)
+                    if (mySqllDataReader2.Read() == false)
                     {
                         //MessageBox.Show("Pas d'insert disponible dans le Kardex");
                     }
-                    else if (mySqllDataReader2.Read() == true)
+                    else 
                     {
                         //MessageBox.Show("Linsert est disponible dans le Kardex");
                         //je crée une nouvelle liste des numéros disponibles dans le kardex
-                        list3.Add(new donnees3
+                        list5.Add(new donnees5
                         {
                             numero = mySqllDataReader2.GetString(0),
-                            HauteurCentre = mySqllDataReader2.GetFloat(1),
-                            HauteurBord = mySqllDataReader2.GetFloat(2),
+
                         });
                     }
-
-                    myConnection.Close();
-                
-                    //Dans la liste que j'ai crée dans le else
-                    // je choisis un numéro aléatoire et le saisir dans le fichier excel avec son hauteur bord et hauteur centre 
-                    Random rnd = new Random();
-                    
-                    var numeroRandom = rnd.Next(list3.Count);
-                    //MessageBox.Show("Random "+numeroRandom);
-                    if (cavite == "04")
-                    {
-                        if (j <= 5)
-                        {
-                            xlworkSheet.Cells[13, j] = mesdonnees3.numero;
-                            xlworkSheet.Cells[14, j] = mesdonnees3.HauteurCentre;
-                            xlworkSheet.Cells[15, j] = mesdonnees3.HauteurBord;
-                        }
-
-                    }
-                    else if (cavite == "08")
-                    {
-                        if (j <= 9)
-                        {
-                            xlworkSheet.Cells[13, j] = mesdonnees3.numero;
-                            xlworkSheet.Cells[14, j] = mesdonnees3.HauteurCentre;
-                            xlworkSheet.Cells[15, j] = mesdonnees3.HauteurBord;
-                        }
-                    }
-                    /*
-                    string strRequete2 = "SELECT [Epais],[CX],[LB] FROM [ACI].[dbo].[Contrainte_all] where Produit ='" + Nom_Produit + "' and Base ='" + mesdonnees2.LineIndex + "' ";
-                    //MessageBox.Show(strRequete2);
-                    myConnection.Open();
-                    SqlCommand myCommand3 = new SqlCommand(strRequete2, myConnection);
-                    SqlDataReader mySqlllDataReader = myCommand3.ExecuteReader();
-                        
-                    while (mySqlllDataReader.Read())
-                    {
-                        list3.Add(new donnees3
-                        {
-                            Epaisseur = mySqlllDataReader.GetString(0),
-                            CX = mySqlllDataReader.GetString(1),
-                        });
-                        MessageBox.Show(" " + mesdonnees3.Epaisseur + " " +mesdonnees3.CX);
-                        if (cavite == "04")
-                        {
-                            if (j <= 5)
-                            {
-                                xlworkSheet.Cells[18, j] = mesdonnees3.Epaisseur;
-                            }
-                        }
-                        else if (cavite == "08")
-                        {
-                            if (j <= 9)
-                            {
-                                xlworkSheet.Cells[21, j] = mesdonnees3.CX;
-                            }
-                        }
-                    }
-                    */
-                    j += 1;
                     myConnection.Close();
                 }
+
+                Random rnd = new Random();
+                int nbr = rnd.Next(0, list5.Count);
+                //MessageBox.Show("Random " + list5.Count);
+
+                var j = 0;
+
+                foreach (donnees5 mesdonnees5 in list5)
+                {
+
+                        xlworkSheet.Cells[13, i] = mesdonnees5.numero;
+
+                    
+                    j = +1;
+                }
+                
+                i += 1;
+
             }
 
-
+            i = 2;
             foreach (donnees2 mesdonnees2 in list2)
             {
 
@@ -487,6 +448,9 @@ namespace Calage_Inserts
                 SqlCommand myCommand1 = new SqlCommand(strRequete1, myConnection);
                 SqlDataReader mySqllDataReader = myCommand1.ExecuteReader();
 
+                list3.Clear();
+                list4.Clear();
+
                 while (mySqllDataReader.Read())
                 {
 
@@ -551,32 +515,36 @@ namespace Calage_Inserts
                             xlworkSheet.Cells[21, j] = mesdonnees3.HauteurBord;
                         }
                     }
-                    string strRequete2 = "SELECT [Epais],[CX],[LB] FROM [ACI].[dbo].[Contrainte_all] where Produit ='" + Nom_Produit + "' and Base ='" + mesdonnees2.LineIndex + "' ";
-                    //MessageBox.Show(strRequete2);
-                    myConnection.Open();
-                    SqlCommand myCommand3 = new SqlCommand(strRequete2, myConnection);
-                    SqlDataReader mySqlllDataReader = myCommand3.ExecuteReader();
 
-                    while (mySqlllDataReader.Read())
+                    foreach (donnees4 mesdonnees4 in list4)
                     {
-                        list3.Add(new donnees3
+                        string strRequete2 = "SELECT [Epais],[CX],[LB] FROM [ACI].[dbo].[Contrainte_all] where Produit ='" + Nom_Produit + "' and Base ='" + mesdonnees2.LineIndex + "' ";
+                        //MessageBox.Show(strRequete2);
+                        myConnection.Open();
+                        SqlCommand myCommand3 = new SqlCommand(strRequete2, myConnection);
+                        SqlDataReader mySqlllDataReader = myCommand3.ExecuteReader();
+
+                        while (mySqlllDataReader.Read())
                         {
-                            Epaisseur = mySqlllDataReader.GetString(0),
-                            CX = mySqlllDataReader.GetString(1),
-                        });
-                        //MessageBox.Show(" " + mesdonnees3.Epaisseur + " " + mesdonnees3.CX);
-                        if (cavite == "04")
-                        {
-                            if (j <= 5)
+                            list4.Add(new donnees4
                             {
-                                xlworkSheet.Cells[18, j] = mesdonnees3.Epaisseur;
+                                Epaisseur = mySqlllDataReader.GetFloat(0),
+                                CX = mySqlllDataReader.GetFloat(1),
+                            });
+                            //MessageBox.Show(" " + mesdonnees3.Epaisseur + " " + mesdonnees3.CX);
+                            if (cavite == "04")
+                            {
+                                if (j <= 5)
+                                {
+                                    xlworkSheet.Cells[18, j] = mesdonnees4.Epaisseur;
+                                }
                             }
-                        }
-                        else if (cavite == "08")
-                        {
-                            if (j <= 9)
+                            else if (cavite == "08")
                             {
-                                xlworkSheet.Cells[21, j] = mesdonnees3.CX;
+                                if (j <= 9)
+                                {
+                                    xlworkSheet.Cells[21, j] = mesdonnees4.CX;
+                                }
                             }
                         }
                     }
@@ -606,9 +574,7 @@ namespace Calage_Inserts
                         row.Cells[0].Selected = true;
                         break;
                     }
-
                 }
-
             }
             catch (Exception exc)
             {
