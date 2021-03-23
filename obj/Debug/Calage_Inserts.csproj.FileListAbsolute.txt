@@ -83,7 +83,6 @@ R:\Commun\ACI\Autre\Calage_Inserts\Calage_Inserts\bin\Debug\System.Numerics.Vect
 R:\Commun\ACI\Autre\Calage_Inserts\Calage_Inserts\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 R:\Commun\ACI\Autre\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.csproj.CopyComplete
 R:\Commun\ACI\Autre\Calage_Inserts\Calage_Inserts\bin\Debug\Oracle.DataAccess.dll
-C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\bin\Debug\Oracle.DataAccess.dll
 C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.Stock.resources
 C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\bin\Debug\System.Data.SqlClient.dll
 C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\bin\Debug\System.Data.SqlClient.xml
@@ -277,3 +276,5 @@ C:\Users\lenzia\Desktop\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.c
 C:\Users\lenzia\Desktop\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.exe
 C:\Users\lenzia\Desktop\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.pdb
 C:\Users\lenzia\Desktop\Calage_Inserts\Calage_Inserts\bin\Debug\Calage_Inserts.pdb
+C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\obj\Debug\Calage_Inserts.Remplacer_Un_Insert.resources
+C:\Users\thiernd\Documents\Calage_Inserts\Calage_Inserts\bin\Debug\Oracle.DataAccess.dll

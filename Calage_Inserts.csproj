@@ -157,11 +157,11 @@
     <Compile Include="Extraction_Jobs.Designer.cs">
       <DependentUpon>Extraction_Jobs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rechercher_un_insert.cs">
+    <Compile Include="Remplacer_Un_Insert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rechercher_un_insert.Designer.cs">
-      <DependentUpon>Rechercher_un_insert.cs</DependentUpon>
+    <Compile Include="Remplacer_Un_Insert.Designer.cs">
+      <DependentUpon>Remplacer_Un_Insert.cs</DependentUpon>
     </Compile>
     <Compile Include="Remplir_Feuille_Calage.cs">
       <SubType>Form</SubType>
@@ -212,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Extraction_Jobs.resx">
       <DependentUpon>Extraction_Jobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remplacer_Un_Insert.resx">
+      <DependentUpon>Remplacer_Un_Insert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Remplir_Feuille_Calage.resx">
       <DependentUpon>Remplir_Feuille_Calage.cs</DependentUpon>

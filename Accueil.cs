@@ -67,7 +67,10 @@ namespace Calage_Inserts
 
         private void Remplacer_un_insert_Click(object sender, EventArgs e)
         {
-
+            
+            this.Hide();
+            Remplacer_Un_Insert r = new Remplacer_Un_Insert();
+            r.Show();
         }
 
         private void Ajouter_un_insert_Click(object sender, EventArgs e)

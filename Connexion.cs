@@ -13,23 +13,16 @@ namespace Calage_Inserts
 {
     public partial class Connexion : Form
     {
-        
-       
+
         public Connexion()
         {
             InitializeComponent();
            
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
         }
-
-        
-
-       
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -39,7 +32,6 @@ namespace Calage_Inserts
         {
             
         }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox1.BackColor = Color.White;
@@ -47,6 +39,26 @@ namespace Calage_Inserts
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            
+            /*
+            SqlConnection connection = new SqlConnection(@"user id=sa; password=K@rdexlsadm21!; data source=FRESD32615\SQLEXPRESS");
+            string query = "SELECT * FROM [ACI].[dbo].[User_ACI] WHERE [Login_User_ACI] = @user AND [Mdp] = @pass";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.Add("@user", textBox1.Text);
+            command.Parameters.Add("@pass", textBox2.Text);
+            connection.Open();
+            int result = (int)command.ExecuteScalar();
+            if (result > 0)
+            {
+                // contriole user/mot de passe OK
+            }
+            connection.Close();
+
+            */
+
+
+
+            
             //Connexion utilisateurs
             string myConnectionString = @"user id=sa; password=K@rdexlsadm21!; data source=FRESD32615\SQLEXPRESS";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
@@ -113,10 +125,10 @@ namespace Calage_Inserts
                 myConnection.Close();
             }
 
+            
 
 
-            
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
