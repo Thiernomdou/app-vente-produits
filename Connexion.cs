@@ -39,26 +39,6 @@ namespace Calage_Inserts
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
-            /*
-            SqlConnection connection = new SqlConnection(@"user id=sa; password=K@rdexlsadm21!; data source=FRESD32615\SQLEXPRESS");
-            string query = "SELECT * FROM [ACI].[dbo].[User_ACI] WHERE [Login_User_ACI] = @user AND [Mdp] = @pass";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.Add("@user", textBox1.Text);
-            command.Parameters.Add("@pass", textBox2.Text);
-            connection.Open();
-            int result = (int)command.ExecuteScalar();
-            if (result > 0)
-            {
-                // contriole user/mot de passe OK
-            }
-            connection.Close();
-
-            */
-
-
-
-            
             //Connexion utilisateurs
             string myConnectionString = @"user id=sa; password=K@rdexlsadm21!; data source=FRESD32615\SQLEXPRESS";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
@@ -104,6 +84,12 @@ namespace Calage_Inserts
                             Accueil2 a = new Accueil2(dt.Rows[0][1].ToString());
                             a.Show();
                         }
+                        else if (dt.Rows[0][0].ToString() == "4")
+                        {
+                            Accueil a = new Accueil(dt.Rows[0][1].ToString());
+                            a.Show();
+                        }
+
                     }
                     else
                     {

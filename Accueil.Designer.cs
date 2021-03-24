@@ -41,6 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             this.retirer_insert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.retirer_insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.retirer_insert.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retirer_insert.Location = new System.Drawing.Point(433, 183);
+            this.retirer_insert.Location = new System.Drawing.Point(436, 181);
             this.retirer_insert.Name = "retirer_insert";
             this.retirer_insert.Size = new System.Drawing.Size(165, 53);
             this.retirer_insert.TabIndex = 0;
@@ -82,7 +84,7 @@
             this.extraction_jobs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.extraction_jobs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.extraction_jobs.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extraction_jobs.Location = new System.Drawing.Point(719, 183);
+            this.extraction_jobs.Location = new System.Drawing.Point(722, 181);
             this.extraction_jobs.Name = "extraction_jobs";
             this.extraction_jobs.Size = new System.Drawing.Size(165, 53);
             this.extraction_jobs.TabIndex = 1;
@@ -100,7 +102,7 @@
             this.Ajouter_un_insert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Ajouter_un_insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ajouter_un_insert.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ajouter_un_insert.Location = new System.Drawing.Point(433, 269);
+            this.Ajouter_un_insert.Location = new System.Drawing.Point(436, 267);
             this.Ajouter_un_insert.Name = "Ajouter_un_insert";
             this.Ajouter_un_insert.Size = new System.Drawing.Size(165, 53);
             this.Ajouter_un_insert.TabIndex = 2;
@@ -118,7 +120,7 @@
             this.Remplacer_un_insert.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Remplacer_un_insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Remplacer_un_insert.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Remplacer_un_insert.Location = new System.Drawing.Point(719, 269);
+            this.Remplacer_un_insert.Location = new System.Drawing.Point(722, 267);
             this.Remplacer_un_insert.Name = "Remplacer_un_insert";
             this.Remplacer_un_insert.Size = new System.Drawing.Size(165, 53);
             this.Remplacer_un_insert.TabIndex = 3;
@@ -136,7 +138,7 @@
             this.Stock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Stock.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stock.Location = new System.Drawing.Point(433, 354);
+            this.Stock.Location = new System.Drawing.Point(436, 352);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(165, 53);
             this.Stock.TabIndex = 4;
@@ -154,7 +156,7 @@
             this.Rechercher_une_feuille.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Rechercher_une_feuille.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Rechercher_une_feuille.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rechercher_une_feuille.Location = new System.Drawing.Point(719, 354);
+            this.Rechercher_une_feuille.Location = new System.Drawing.Point(722, 352);
             this.Rechercher_une_feuille.Name = "Rechercher_une_feuille";
             this.Rechercher_une_feuille.Size = new System.Drawing.Size(165, 53);
             this.Rechercher_une_feuille.TabIndex = 5;
@@ -172,7 +174,7 @@
             this.Remplir_une_feuille_de_calage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Remplir_une_feuille_de_calage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Remplir_une_feuille_de_calage.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Remplir_une_feuille_de_calage.Location = new System.Drawing.Point(433, 441);
+            this.Remplir_une_feuille_de_calage.Location = new System.Drawing.Point(436, 439);
             this.Remplir_une_feuille_de_calage.Name = "Remplir_une_feuille_de_calage";
             this.Remplir_une_feuille_de_calage.Size = new System.Drawing.Size(165, 53);
             this.Remplir_une_feuille_de_calage.TabIndex = 6;
@@ -190,7 +192,7 @@
             this.Suivie_scrap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Suivie_scrap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Suivie_scrap.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Suivie_scrap.Location = new System.Drawing.Point(719, 441);
+            this.Suivie_scrap.Location = new System.Drawing.Point(722, 439);
             this.Suivie_scrap.Name = "Suivie_scrap";
             this.Suivie_scrap.Size = new System.Drawing.Size(165, 53);
             this.Suivie_scrap.TabIndex = 7;
@@ -202,7 +204,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(962, 17);
+            this.label1.Location = new System.Drawing.Point(907, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 12;
@@ -213,7 +215,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(866, 17);
+            this.label2.Location = new System.Drawing.Point(800, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 22);
             this.label2.TabIndex = 13;
@@ -224,7 +226,7 @@
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1038, 12);
+            this.button1.Location = new System.Drawing.Point(1048, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 34);
             this.button1.TabIndex = 14;
@@ -232,12 +234,35 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(451, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(400, 32);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "APPLICATION CALAGE INSERTS";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 541);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(738, 19);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Pour toute rencontre avec un dysfonctionnement, merci de contacter : thiernd@essi" +
+    "lor.fr ou lenzia@essilor.fr";
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1160, 569);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -276,6 +301,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
