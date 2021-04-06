@@ -37,7 +37,6 @@
             this.CD_PRESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CD_MOLD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PRODUCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -129,19 +128,6 @@
             this.PRODUCT.Name = "PRODUCT";
             this.PRODUCT.Width = 85;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RosyBrown;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(576, 61);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 34);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Extraire";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -178,13 +164,13 @@
             this.button5.BackColor = System.Drawing.Color.RosyBrown;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(712, 59);
+            this.button5.Location = new System.Drawing.Point(579, 61);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(110, 36);
+            this.button5.Size = new System.Drawing.Size(110, 34);
             this.button5.TabIndex = 24;
-            this.button5.Text = "Extraire Test";
+            this.button5.Text = "Extraire";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // Extraction_Jobs
             // 
@@ -196,7 +182,6 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -217,7 +202,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
